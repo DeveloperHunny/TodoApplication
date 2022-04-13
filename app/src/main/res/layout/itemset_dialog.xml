@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="300dp"
+        android:layout_height="450dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/dialog_background_style">
+
+        <EditText
+            android:id="@+id/titleEdit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:hint="제목을 입력하세요."
+            android:textColor="@color/black"
+            android:textColorHint="#2E615F5F"
+            android:fontFamily="@font/maplestory_bold"
+            android:textSize="28sp"
+            android:padding="15dp" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/closeBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_close"
+                android:backgroundTint="@color/primary_orange"
+                android:layout_marginRight="4dp"
+                android:layout_marginTop="4dp"/>
+
+        </FrameLayout>
+
+        <EditText
+            android:id="@+id/contentEdit"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:textColor="#CC424040"
+            android:textColorHint="#2E615F5F"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:fontFamily="@font/maplestory_light"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titleEdit"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:hint="내용을 입력하세요."
+            android:gravity="top"
+            android:padding="15dp"/>
+
+
+        <!-- 아이템 처음 만들때는 안 보이고 이후에 date 설정되면 보이게 만들기 -->
+        <!--android:visibility="gone"-->
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@id/buttonContainerLayout"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginRight="20dp">
+
+
+            <TextView
+                android:id="@+id/dueDateText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Due Date : 2022-04-05 12:00"
+                android:textColor="@color/primary_orange"
+                android:fontFamily="@font/maplestory_light"/>
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/buttonContainerLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:padding="15dp">
+
+            <Button
+                android:id="@+id/timeBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="time"
+                android:fontFamily="@font/maplestory_bold"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:backgroundTint="#FFC107"
+                android:background="@drawable/button_style" />
+
+            <Button
+                android:id="@+id/saveBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="SAVE"
+                android:fontFamily="@font/maplestory_bold"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:backgroundTint="#FFC107"
+                android:background="@drawable/button_style"
+                android:layout_marginLeft="8dp"/>
+
+            <!-- 아이템 새로 만들 때는 보이고 수정할 때는 안 보이게 만들기 -->
+            <!--android:visibility="gone"-->
+            <Button
+                android:id="@+id/deleteBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Delete"
+                android:textSize="16sp"
+                android:layout_marginLeft="8dp"
+                android:textColor="@color/white"
+                android:background="@drawable/dialog_background_style"
+                android:fontFamily="@font/maplestory_bold"
+                android:backgroundTint="#FFC107"/>
+
+
+        </LinearLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
