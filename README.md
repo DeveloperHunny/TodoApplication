@@ -7,7 +7,6 @@ Todo List를 통한 효율적인 todo 작성 및 시간 관리
 - RecyclerView를 통한 item touch handling 구현(삭제, 이동 가능)
 - table 생성 및 삭제 가능
 
-<br>
 
 ---
 
@@ -19,7 +18,6 @@ Todo List를 통한 효율적인 todo 작성 및 시간 관리
 - 효율적인 자원 관리
 - https://velog.io/@eogns0321/Recycler-View-%EA%B0%84%EB%8B%A8-%EC%A0%95%EB%A6%AC - RecyclerView 정리 내용
 
-<br>
 
 ---
 
